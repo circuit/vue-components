@@ -23,7 +23,7 @@ Vue.component('circuit-logon', {
       </button>
       <div v-if="user" class="ml-auto d-flex">
         <div class="d-flex flex-column">
-          <div v-if="user">{{user.displayName}}</div>
+          <div v-if="user" style="line-height:1.3">{{user.displayName}}</div>
           <a class="align-self-end" style="line-height:1" type="link" href="#"
             v-on:click="logout"
             v-if="user"><small>Logout</small>
