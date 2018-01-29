@@ -6,11 +6,15 @@ Vue.component('circuit-logon', {
         return {}
       }
     },
+    title: {
+      type: String,
+      default: 'Circuit SDK example'
+    }
   },
   template: `
     <div v-cloak class="d-flex align-items-center pb-2 mb-2 border-bottom">
       <div>
-        <h6 class="mb-0">Direct call with realtime stats</h6>
+        <h6 class="mb-0">{{title}}</h6>
         <small class="text-secondary mt-0">using 
           <a href="https://github.com/circuit/circuit-sdk">
             <small>Circuit JS SDK</small>
