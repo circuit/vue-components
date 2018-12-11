@@ -67,7 +67,11 @@ Vue.component('circuit-logon', {
     },
     logout: function() {
       this.client.logout()
-        .catch(console.error)
+        .then(() => this.$emit('logout', { success: true }))
+        .catch(err => {
+          console.error(err);
+          this.$emit({ error: err });
+        });
     }
   }
 })
