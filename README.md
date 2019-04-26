@@ -32,5 +32,4 @@ Listview of conversations. Raises change event when conversation is selected.
 ## Usage
 
 See https://stackblitz.com/edit/circuitsdk-template
-<iframe src="https://stackblitz.com/edit/circuitsdk-template?embed=1&file=index.html"></iframe>
 
