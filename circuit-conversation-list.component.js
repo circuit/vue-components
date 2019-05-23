@@ -18,14 +18,15 @@ export default Vue.component('circuitConversationList', {
   },
   template: `
     <div>
-      <select class="select-wide" :size="size">
-        <option v-for="conversation in conversations" @click="conversationSelected(conversation)">{{ conversation.topic || conversation.topicPlaceholder }}</option>
+      <select class="select-wide" :size="size"  @change="conversationSelected(selected)" v-model="selected">
+        <option v-for="conversation in conversations" :value="conversation">{{ conversation.topic || conversation.topicPlaceholder }}</option>
       </select>
     </div>`,
   data: function () {
     return {
       conversations: [],
-      usersHashtable: {}
+      usersHashtable: {},
+      selected: null
     }
   },
   created: async function () {
